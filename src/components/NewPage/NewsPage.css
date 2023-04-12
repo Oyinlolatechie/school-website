@@ -1,0 +1,190 @@
+.News-section {
+  margin-bottom: 200px;
+}
+
+.News-bg {
+  width: 100vw;
+  height: 450px;
+  background: linear-gradient(
+      45deg,
+      rgb(26, 31, 51, 0.95),
+      rgb(26, 31, 51, 0.95)
+    ),
+    url(../../assets/images/students-in-sportwears.jpeg);
+  background-size: cover;
+  /* background: red; */
+  text-align: left;
+}
+
+.News-header {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+  /* background-color: red; */
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+.News-header h2 {
+  margin-bottom: 60px;
+  /* border-bottom: 4px solid red; */
+  /* padding-bottom: 20px; */
+  font-family: "Lato", sans-serif;
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.news-wrapper {
+  width: 90vw;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.news-img {
+  width: 28vw;
+  margin: 50px 10px 10px 8vw;
+  position: relative;
+  border-radius: 20px;
+  border: 4px solid red;
+  font-size: 0;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.tag {
+  background-color: rgb(26, 31, 51, 0.95);
+  color: #ffffff;
+  width: fit-content;
+  padding: 5px 10px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  font-size: 16px;
+}
+
+.news-content {
+  width: 58vw;
+  height: fit-content;
+  font-family: "Lato", sans-serif;
+  font-size: 19px;
+  padding: 20px;
+  margin: 40px 0 0 -80px;
+  background: white;
+  z-index: 1;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-content:hover {
+  background: red;
+  color: white;
+  transition: 500ms;
+}
+
+.news-content h2,
+p {
+  margin-bottom: 20px;
+}
+
+/* ==============New content section =========== */
+
+.news-headline-wrapper {
+  width: 70vw;
+  height: 200px;
+  /* background: red; */
+  margin: 5vh auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.line-horizontal {
+  height: 10px;
+  width: 70px;
+  background-color: red;
+  margin: -1px;
+}
+
+.line-vertical {
+  height: 70px;
+  width: 10px;
+  background-color: red;
+  margin: -1px;
+}
+
+.news-date {
+  border: 6px solid black;
+  border-radius: 4px;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-day {
+  font-family: "Lato", sans-serif;
+  font-size: 62px;
+}
+
+.news-month {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+}
+
+.news-calendar {
+  margin: 0 60px 0 0;
+}
+
+.news-head {
+  /* background-color: red; */
+  font-family: "Lato", sans-serif;
+  height: 145px;
+  width: 59vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 4px solid black;
+}
+
+.news-head > h2 {
+  font-size: 46px;
+  font-weight: 200;
+  word-spacing: 6px;
+}
+
+.news-head > div {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: flex-end;
+}
+
+.news-head > div > p {
+  margin-top: 40px;
+}
+
+.news-head > div > button {
+  margin: 0 50px 20px 0;
+  height: 30px;
+  width: 70px;
+  border: 0;
+  background-color: rgb(26, 31, 51, 0.95);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.news-article {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  width: 70vw;
+  margin: 0 auto 30vh auto;
+}

@@ -1,0 +1,95 @@
+.slide-1 {
+  width: 100%;
+  padding: 10rem 0;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../../assets/images/admin-img.png");
+  text-align: center;
+}
+.slide-2 {
+  width: 100%;
+  padding: 9.2rem 0;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../../assets/images/IMG-20220923-WA0014.jpg");
+}
+
+.slide-3 {
+  width: 100%;
+  padding: 8.4rem 0;
+  background-size: cover;
+  background-image: url("../../assets/images/pexels-rodnae-productions-8363561.jpg");
+}
+
+.slider h2 {
+  background-color: #c43a27;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  color: #f8f8f8;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+}
+
+.slider p {
+  background-color: #222842;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  color: #f8f8f8;
+  padding: 0.2rem 1rem;
+  margin: 1rem auto;
+  width: fit-content;
+  border-radius: 0.2rem;
+}
+
+.slide-2 p,
+.slide-3 p {
+  width: 800px;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 940px) {
+  .slider h2 {
+    font-size: 20px;
+  }
+
+  .slider p {
+    font-size: 15px;
+  }
+
+  .slide-2 p,
+  .slide-3 p {
+    width: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slide-1,
+  .slide-2,
+  .slide-3 {
+    padding: 10rem 0;
+  }
+
+  .slider h2 {
+    font-size: 15px;
+  }
+
+  .slider p {
+    font-size: 15px;
+    display: none;
+  }
+
+  .slide-2 p,
+  .slide-3 p {
+    display: none;
+  }
+}
