@@ -1,6 +1,6 @@
 import "./AboutUs.css"
-import properietorImg from "../../assets/images/properietor.png"
-import rocketImg from "../../assets/images/rocket.png"
+// import properietorImg from "../../assets/images/properietor.png"
+// import rocketImg from "../../assets/images/rocket.png"
 import Footer from "../../components/HomePage/Footer"
 
 const AboutUsPage = () => {
