@@ -12,8 +12,8 @@ const NewsContent = () => {
     return (<>
 
 
-        <div className="News-bg">
-            <div className="News-header">
+        <div className="news-bg">
+            <div className="news-header">
                 <h2>News & Articles</h2>
                 <hr />
             </div>

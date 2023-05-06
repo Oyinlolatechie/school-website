@@ -1,6 +1,6 @@
 .slide-1 {
   width: 100%;
-  padding: 10rem 0;
+  padding: 20rem 0;
   background-size: cover;
   background-image: linear-gradient(
       to bottom,
@@ -12,7 +12,7 @@
 }
 .slide-2 {
   width: 100%;
-  padding: 9.2rem 0;
+  padding: 19.2rem 0;
   background-size: cover;
   background-image: linear-gradient(
       to bottom,
@@ -24,7 +24,7 @@
 
 .slide-3 {
   width: 100%;
-  padding: 8.4rem 0;
+  padding: 18.4rem 0;
   background-size: cover;
   background-image: url("../../assets/images/pexels-rodnae-productions-8363561.jpg");
 }
@@ -57,7 +57,58 @@
   text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 940px) {
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .slide-1 {
+    padding: 16rem 0;
+  }
+
+  .slide-2 {
+    padding: 15rem 0;
+  }
+
+  .slide-3 {
+    padding: 14.4rem 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .slide-1 {
+    padding: 15rem 0;
+  }
+
+  .slide-2 {
+    padding: 14.4rem 0;
+  }
+
+  .slide-3 {
+    padding: 14.4rem 0;
+  }
+
+  .slider h2 {
+    font-size: 20px;
+  }
+
+  .slider p {
+    font-size: 15px;
+  }
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .slide-1 {
+    padding: 10rem 0;
+  }
+
+  .slide-2 {
+    padding: 9.4rem 0;
+  }
+
+  .slide-3 {
+    padding: 8.8rem 0;
+  }
+
   .slider h2 {
     font-size: 20px;
   }
@@ -72,7 +123,31 @@
   }
 }
 
-@media (max-width: 767px) {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slide-1,
+  .slide-2,
+  .slide-3 {
+    padding: 10rem 0;
+  }
+
+  .slider h2 {
+    font-size: 15px;
+  }
+
+  .slider p {
+    font-size: 15px;
+    display: none;
+  }
+
+  .slide-2 p,
+  .slide-3 p {
+    display: none;
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
   .slide-1,
   .slide-2,
   .slide-3 {

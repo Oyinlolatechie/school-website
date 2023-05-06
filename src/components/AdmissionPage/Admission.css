@@ -1,31 +1,114 @@
-.admin-img{
-    width: 70vw;
-    /* background: url("../images/Borclle.gif"); */
-    /* background-size: cover; */
-    margin: 3% auto;
- } 
- 
- .admin-img> img{
-    width:100%;
-    margin: 0 auto;
- }
- 
- .admin-main{
-    width: 70vw;
-    margin: 180px auto;
-    font-family: 'Lato', sans-serif;
- }
- 
- .admin-main h2{
-    font-size: 42px;
- }
- 
- 
- .admin-main p{
-    font-family: 'Lato', sans-serif;
+.admin-img {
+  width: 70vw;
+  /* background: url("../images/Borclle.gif"); */
+  /* background-size: cover; */
+  margin: 2rem auto;
+}
+
+.admin-img > img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.admin-main {
+  width: 70vw;
+  margin: 150px auto;
+  font-family: "Lato", sans-serif;
+}
+
+.admin-main h2 {
+  font-size: 42px;
+}
+
+.admin-main p {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+  margin-bottom: 60px;
+}
+
+/* =============Media Queries section =========== */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .admin-img {
+    width: 80vw;
+    margin: 2rem auto;
+  }
+
+  .admin-main {
+    width: 80vw;
+    margin: 100px auto;
+  }
+
+  .admin-main p {
     font-size: 20px;
     line-height: 50px;
     margin-bottom: 60px;
- 
- }
- 
+  }
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .admin-img {
+    width: 80vw;
+    margin: 1.5rem auto;
+  }
+
+  .admin-main {
+    width: 80vw;
+    margin: 100px auto;
+  }
+
+  .admin-main p {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .admin-img {
+    width: 85vw;
+    margin: 1rem auto;
+  }
+
+  .admin-main {
+    width: 85vw;
+    margin: 100px auto;
+  }
+
+  .admin-main h2 {
+    font-size: 40px;
+  }
+
+  .admin-main p {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .admin-img {
+    width: 85vw;
+    margin: 1rem auto;
+  }
+
+  .admin-main {
+    width: 90vw;
+    margin: 80px auto;
+  }
+
+  .admin-main h2 {
+    font-size: 40px;
+  }
+
+  .admin-main p {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 80px;
+  }
+}

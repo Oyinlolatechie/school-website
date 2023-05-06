@@ -15,9 +15,9 @@ const NewsPage = () => {
             {error && <div>{error}</div>}
 
             {News && <div>
-                {News && (<div className="News-section">
-                    <div className="News-bg">
-                        <div className="News-header">
+                {News && (<div className="news-section">
+                    <div className="news-bg">
+                        <div className="news-header">
                             <h2>News & Articles</h2>
                             <hr />
                             {/* <p>  The admissions process at New Hall International School consists of a sequence of steps which vary depending upon the age of the child. Below is a summary of the process

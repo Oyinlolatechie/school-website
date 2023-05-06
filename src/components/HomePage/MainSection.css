@@ -1,46 +1,64 @@
+:root {
+  --brand-red: #c43a27;
+  --brand-blue: #2d3453;
+  --screen-xl: 1200px;
+  --screen-lg: 992px;
+  --screen-md: 768px;
+  --screen-sm: 576px;
+}
+
 .admission {
-  background-color: #2d3453;
-  display: flex;
-  width: 70vw;
-  margin: 0 auto;
-  justify-content: space-between;
-  text-align: start;
   align-items: center;
+  background-color: var(--brand-blue);
+  border-top: 5px solid var(--brand-red);
+  border-bottom: 5px solid var(--brand-red);
+  display: flex;
+  height: 200px;
   margin: 0 auto;
-  top: 60%;
-  left: 17%;
-  border-top: 5px solid #c43a27;
-  position: absolute;
-  z-index: 1;
+  position: relative;
+  text-align: start;
+  width: 84vw;
 }
 
 .admin-image {
-  width: 200px;
-  height: 200px;
-}
-.admin-image img {
-  width: 100%;
+  background-image: url("../../assets/images/DTS-Boy-Girl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
+  width: 30%;
+
+  /* position: static; */
+  /* background-position: center top; */
+  /* border: 4px solid red; */
 }
 
 .admin-content {
-  font-family: "Lato", sans-serif;
   color: white;
-  line-height: 60px;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
+  height: 100%;
+  line-height: 34px;
+  padding: 20px 50px 0 20px;
+  width: 65%;
+
+  /* background-color: red; */
+}
+
+.admin-content h2 {
+  margin-bottom: 12px;
 }
 
 .admin-btn {
-  width: 200px;
-  height: 50px;
-  border: 2px solid white;
   background-color: #222842;
-  color: white;
+  border: 2px solid white;
   border-radius: 5px;
-  margin-right: 20px;
+  color: white;
   font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: bold;
+  height: 45px;
+  margin-right: 50px;
+  width: 15%;
 }
 
 .admin-btn:hover {
@@ -48,29 +66,185 @@
   color: #222842;
 }
 
+/* ----- media query for admission section -----   */
+/*  X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) and (max-width: 1399.98px) {
+  body {
+    background-color: red;
+  }
+  .admission {
+    top: 90%;
+    left: 6%;
+    width: 88vw;
+    height: 28%;
+  }
+
+  .admin-content {
+    width: 70%;
+    font-size: 20px;
+    line-height: 36px;
+    padding: 24px 5px 0 10px;
+  }
+
+  .admin-content h2 {
+    margin-bottom: 10px;
+  }
+} */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .admission {
+    width: 90vw;
+    height: 180px;
+  }
+  .admin-content {
+    width: 70%;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 22px 5px 0 10px;
+  }
+
+  .admin-btn {
+    height: 45px;
+  }
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .admission {
+    width: 90vw;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .admin-content {
+    width: 70%;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 22px 5px 0 10px;
+  }
+
+  .admin-image {
+    background-size: cover;
+    height: 100%;
+    width: 30%;
+    /* border: 5px solid red; */
+  }
+
+  .admin-btn {
+    width: 15%;
+    height: 40px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .admission {
+    width: 90vw;
+    height: 160px;
+    margin: 0 auto;
+  }
+
+  /* .admin-content {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px 15px 0 15px;
+    width: 70%;
+  } */
+
+  .admin-content {
+    width: 80%;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 22px 5px 0 10px;
+  }
+  .admin-content h2 {
+    margin-bottom: 8px;
+  }
+
+  .admin-image {
+    display: none;
+  }
+
+  .admin-btn {
+    width: 18%;
+    margin-right: 10px;
+    height: 40px;
+    font-size: 13px;
+    /* border: 2px red solid; */
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .admission {
+    top: 74.2%;
+    /* gap: 20%; */
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    border-top: none;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  .admin-image {
+    display: none;
+  }
+
+  .admin-content {
+    width: 90%;
+    height: 20%;
+    text-align: start;
+    padding: 0px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 14px;
+    line-height: 25px;
+    border-bottom: none;
+    border-top: none;
+    /* border: 4px solid red; */
+  }
+
+  .admin-content h2 {
+    font-size: 24px;
+    padding: 10px 0;
+
+    /* color: red; */
+  }
+
+  .admin-btn {
+    height: 40px;
+    width: 80%;
+    margin: 0 0 10px 0;
+  }
+}
+
 /* ============About Us ==================== */
 
 .about-us {
-  margin: 14rem auto 4rem auto;
-  /* background: red; */
-  /* border: 4px red solid; */
+  align-items: center;
+  display: flex;
+  margin: 4rem auto;
   font-family: "Lato", sans-serif;
   font-size: 20px;
-  width: 90%;
-  display: flex;
   justify-content: space-between;
+  /* background: red; */
+  /* border: 4px red solid; */
   padding: 80px;
-  align-items: center;
+  width: 90%;
 }
 
 .aboutUs-content {
-  width: 620px;
   line-height: 36px;
+  width: 50%;
 }
-/* 
-.aboutUs-content > h2{
-   margin-bottom: 40px;
-} */
 
 .aboutUs-content > p {
   margin: 40px 0;
@@ -87,49 +261,179 @@
 }
 
 .aboutUs-image {
-  width: 450px;
-  height: 400px;
+  background-image: url("../../assets/images/few-students-standing.jpeg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 4px solid #c43a27;
   border-radius: 5%;
+  height: 48vh;
+  width: 40%;
 }
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .aboutUs-content {
+    font-size: 18px;
+    line-height: 28px;
+    width: 60%;
+    margin-right: 6%;
+  }
+
+  .aboutUs-content > p {
+    margin: 20px 0;
+  }
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about-us {
+    padding: 1rem;
+
+    /* border: 2px solid red; */
+  }
+
+  .aboutUs-content {
+    font-size: 16px;
+    line-height: 24px;
+    width: 60%;
+    /* border: 2px solid black; */
+    padding-right: 1rem;
+  }
+
+  .aboutUs-image {
+    width: 38%;
+    margin-right: 2rem;
+  }
+
+  .aboutUs-content > p {
+    margin: 20px 0;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-us {
+    padding: 0;
+    text-align: start;
+    width: 90vw;
+
+    flex-direction: column;
+    align-items: start;
+    /* border: 2px solid red; */
+  }
+  .aboutUs-content {
+    line-height: 28px;
+    width: 100%;
+    /* border: 2px solid black; */
+  }
+
+  .aboutUs-content > p {
+    font-size: medium;
+    margin: 16px 0;
+  }
+
+  .aboutUs-image {
+    display: none;
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .about-us {
+    padding: 0;
+    text-align: start;
+    width: 90vw;
+
+    flex-direction: column;
+    align-items: start;
+    /* border: 2px solid red; */
+  }
+  .aboutUs-content {
+    line-height: 28px;
+    width: 100%;
+    /* border: 2px solid black; */
+  }
+
+  .aboutUs-content > p {
+    font-size: medium;
+    margin: 16px 0;
+  }
+
+  .aboutUs-image {
+    display: none;
+  }
+}
 /* ====================News and Headlines================ */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
 
 .news-headline {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 50px;
-  text-align: center;
   margin: 0 0 4rem 0;
+  text-align: center;
 }
 
-.news-wrapper {
-  display: flex;
-  justify-content: space-around;
+.news-wrap {
+  /* background-color: #e40c0c; */
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0 1rem 4rem;
+}
+
+.news-wrap .slick-slider .slick-next {
+  right: 10px;
+}
+
+.news-wrap .slick-slider .slick-prev {
+  left: 10px;
+}
+.news-wrap .slick-slider .slick-prev,
+.news-wrap .slick-slider .slick-next {
+  width: 80px;
+  height: 30px;
+  font-size: 0;
+  color: var(--brand-blue);
+  z-index: 3;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  /* color: var(--brand-blue); */
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: var(--brand-blue) !important;
 }
 
 .news-image {
-  width: 350px;
-  height: 300px;
   border-radius: 4px 4px 0 0;
+  width: 20vw;
+  height: 12rem;
 }
 
 .news-image > img {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .news-title {
-  font-family: "Lato", sans-serif;
-  padding: 40px 10px 40px 10px;
+  background-color: #ffffff;
   border-bottom: 4px solid rgb(196, 58, 39);
-  width: 350px;
-  text-align: start;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 80%);
+  font-family: "Lato", sans-serif;
   line-height: 32px;
+  height: 9rem;
+  width: 19.3vw;
+  padding: 20px 6px 40px 6px;
+  text-align: start;
 }
 
 .news-title:hover {
   background-color: #c43a27;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 40%);
   color: white;
   margin-top: -60px;
   position: relative;
@@ -137,20 +441,28 @@
 }
 
 .news-title > h2 {
-  font-size: 32px;
+  font-size: 20px;
   margin-bottom: 20px;
+  border-bottom: 2px solid red;
+  height: 120px;
+}
+
+.news-icons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .author > span {
+  color: red;
   font-weight: 600;
   /* padding-bottom: 20px; */
-  color: red;
 }
 
 .author-icon {
-  margin-bottom: -2px;
   font-size: 25px;
+  margin-top: 2px;
 }
+
 .fa-regular {
   font-size: 16px;
   margin-top: 5px;
@@ -161,29 +473,175 @@
   font-size: 14px;
 }
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .news-headline {
+    font-size: 48px;
+    margin: 0 0 2rem 0;
+  }
+
+  .news-title {
+    line-height: 26px;
+    height: 9rem;
+    width: 19.3vw;
+    padding: 20px 6px;
+    text-align: start;
+  }
+
+  .news-title > h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid red;
+    height: 128px;
+  }
+
+  .news-image {
+    width: 20.3vw;
+    height: 12rem;
+  }
+
+  .news-icons {
+    display: none;
+  }
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .news-headline {
+    font-size: 38px;
+    margin: 0 0 2rem 0;
+  }
+
+  .news-title {
+    line-height: 26px;
+    height: 9rem;
+    width: 26vw;
+    padding: 20px 6px;
+  }
+
+  .news-image {
+    width: 27.5vw;
+    height: 12rem;
+  }
+  .news-title > h2 {
+    font-size: 18px;
+    height: 115px;
+    margin-bottom: 10px;
+    /* color: blue; */
+  }
+
+  .news-icons {
+    display: none;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .news-headline {
+    font-size: 38px;
+    margin: 0 0 2rem 0;
+  }
+
+  .news-wrap {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .news-image {
+    width: 32.2vw;
+    height: 10rem;
+  }
+
+  .news-title {
+    line-height: 22px;
+    height: 9rem;
+    width: 30.5vw;
+    padding: 14px 6px;
+  }
+
+  .news-title > h2 {
+    font-size: 18px;
+    height: 115px;
+    margin-bottom: 10px;
+    /* color: blue; */
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 0;
+  }
+  .news-icons {
+    display: none;
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .news-headline {
+    font-size: 32px;
+    margin: 0 0 1rem 0;
+  }
+
+  .news-wrap {
+    /* background-color: blue; */
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem 0 1rem 4rem;
+  }
+
+  .news-image {
+    width: 46vw;
+    height: 26vh;
+  }
+
+  .news-title {
+    line-height: 22px;
+    height: 9rem;
+    width: 44vw;
+    padding: 14px 6px;
+  }
+
+  .news-title > h2 {
+    font-size: 18px;
+    height: 115px;
+    margin-bottom: 10px;
+    /* color: blue; */
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 0;
+  }
+
+  .news-icons {
+    display: none;
+  }
+}
+
 /* ==================Our school In a Glance ======================= */
 
 .our-school {
-  width: 100%;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-
   background: linear-gradient(
       45deg,
       rgb(255, 30, 0, 0.6),
       rgb(196, 58, 39, 0.6)
     ),
     url("../../assets/images/smiling-student.jpg");
-  background-size: cover;
   background-position: center;
-  margin-bottom: 100px;
-  margin-top: 150px;
+  background-size: cover;
+  border-bottom: 6px solid #222842;
+  display: flex;
+  flex-direction: column;
   font-family: "Lato", sans-serif;
   font-size: x-large;
-  border-bottom: 6px solid #222842;
+  height: 350px;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 150px;
+  width: 100%;
+
   /* background-position: center;
    background-size:  cover;
    background-image:  linear-gradient(
@@ -195,17 +653,41 @@
 
 .our-school-content {
   display: flex;
-  width: 100%;
   justify-content: space-around;
   margin-top: 50px;
+  width: 100%;
 }
 
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .our-school {
+    font-size: large;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .our-school {
+    font-size: small;
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .our-school {
+    font-size: small;
+  }
+
+  .our-school-content div {
+    margin: 0 20px;
+  }
+}
 /* ===================== What Our Parents Say ===================== */
 
 .testimonial {
-  width: 100%;
   height: 250px;
   text-align: center;
+  width: 100%;
 }
 
 .testimonial > h2 {
@@ -215,92 +697,204 @@
 }
 
 .testimonial-content {
-  font-family: "lato", sans-serif;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  font-family: "lato", sans-serif;
   /* justify-content: sp; */
-  align-items: center;
 }
 
 .testimonial-content > q {
-  width: 50vw;
-  margin: 10px 0;
   font-size: 24px;
+  margin: 10px 0;
+  width: 50vw;
 }
 
 .testimonial-content > img {
-  width: 100px;
-  height: 100px;
   border: 4px solid #222842;
   border-radius: 50%;
+  height: 100px;
   margin-top: 20px;
+  width: 100px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .testimonial > h2 {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonial-content > q {
+    font-size: 20px;
+    margin: 10px auto;
+  }
+
+  .testimonial-content > img {
+    border: 3px solid #222842;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .testimonial > h2 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonial-content > q {
+    font-size: 18px;
+    margin: 10px auto;
+  }
+
+  .testimonial-content > img {
+    border: 3px solid #222842;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
 }
 
 /* ====================NewsLetter Section =========================== */
 
 .newsletter {
-  font-family: "Lato", sans-serif;
-  width: 50vw;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* background-color: rgb(196, 58, 39) ; */
   border: 3px solid #222842;
   border-radius: 20px;
-  margin: 160px auto;
-  padding: 15px 0px;
-  text-align: center;
   color: #222842;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  height: 200px;
+  justify-content: center;
+  margin: 140px auto;
+  padding: 60px 0px;
+  /* background-color: rgb(196, 58, 39); */
+  text-align: center;
+  width: 50vw;
 }
 
 .newsletter h2 {
-  margin-bottom: 26px;
   font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .newsletter > p {
   font-size: 22px;
 }
 
+.subscribe {
+  margin: 0 auto;
+  width: fit-content;
+  /* background-color: purple; */
+}
+
 .newsletter input {
-  width: 390px;
-  line-height: 38px;
+  border: 3px solid #222842;
+  border-radius: 8px;
 
   /* border: none; */
-  border: 3px solid #222842;
-  margin-top: 30px;
-  border-radius: 8px;
+  line-height: 38px;
+  margin-top: 20px;
+  width: 390px;
 }
 
 .sub-btn {
-  width: 200px;
-  height: 50px;
-  border: none;
   background-color: #c43a27;
-  color: white;
+  border: none;
   border-radius: 5px;
-  margin-left: 20px;
+  color: white;
   font-family: "Lato", sans-serif;
   font-size: large;
   font-weight: bold;
+  height: 50px;
+  margin: 0 auto;
+  width: 200px;
 }
 
 .sub-btn:hover {
-  color: white;
   background-color: #222842;
+  color: white;
 }
 
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .newsletter {
+    width: 60vw;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .newsletter {
+    width: 80vw;
+  }
+
+  .newsletter h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter > p {
+    font-size: 20px;
+  }
+
+  .newsletter input {
+    border: 2px solid #222842;
+    border-radius: 8px;
+
+    /* border: none; */
+    line-height: 30px;
+    margin-top: 10px;
+    width: 50vw;
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .newsletter {
+    width: 90vw;
+    padding: 40px 0px;
+  }
+
+  .newsletter h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .newsletter > p {
+    font-size: 14px;
+  }
+
+  .newsletter input {
+    line-height: 26px;
+    height: 46px;
+    margin-top: 10px;
+    width: 70vw;
+  }
+
+  .sub-btn {
+    height: 38px;
+    margin: 0 auto;
+    width: 34vw;
+  }
+}
 /* ============== Footer Section ================= */
 
 .footer-content {
   background-color: #222842;
-  font-family: "Lato", sans-serif;
   color: rgb(239, 239, 239);
+  font-family: "Lato", sans-serif;
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
+}
+
+.footer-content div {
+  margin: 0 1rem;
 }
 
 footer h2 {
@@ -325,12 +919,42 @@ footer p {
 }
 
 .copyright {
-  text-align: center;
   background-color: #1a1f33;
   color: white;
   height: 60px;
+  text-align: center;
 }
 
 .copyright > p {
   font-size: small;
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-content {
+    font-size: 12px;
+  }
+
+  footer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer-content {
+    font-size: 12px;
+  }
+
+  footer h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-content {
+    display: block;
+  }
 }

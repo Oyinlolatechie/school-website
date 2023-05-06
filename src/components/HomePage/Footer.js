@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
             </div>
             <div class="copyright">
-                    <p>Copyright © 2022 | Divine Treasure College. All Rights Reserved</p>
+                <p>Copyright © 2022 | Divine Treasure College. All Rights Reserved</p>
             </div>
 
         </footer>

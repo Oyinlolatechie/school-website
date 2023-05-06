@@ -1,5 +1,5 @@
 
-import AboutImage from '../../assets/images/few-students-standing.jpeg'
+// import AboutImage from '../../assets/images/few-students-standing.jpeg'
 // import 'aos/dist/aos.css';
 
 
@@ -17,12 +17,9 @@ const AboutUs = () => {
                 <span><a href="/" className="link">Learn more</a></span>
             </div>
 
-            <img
-                src={AboutImage}
-                alt=""
-                className="aboutUs-image"
+            <div className="aboutUs-image">
 
-            />
+            </div>
 
         </div>
     );

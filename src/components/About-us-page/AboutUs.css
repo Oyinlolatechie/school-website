@@ -1,114 +1,396 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 .aboutus-bg {
-    width: 100vw;
-    height: 450px;
-    background:linear-gradient(45deg, rgb(26, 31, 51, 0.95), rgb(26, 31, 51, 0.95)), url(../../assets/images/students-in-sportwears.jpeg);
+  width: 100vw;
+  height: 450px;
+  background: linear-gradient(
+      45deg,
+      rgb(26, 31, 51, 0.95),
+      rgb(26, 31, 51, 0.95)
+    ),
+    url(../../assets/images/students-in-sportwears.jpeg);
+  background-size: cover;
+  /* background: red; */
+  text-align: left;
+}
+
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+  /* background-color: red; */
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+.aboutus h2 {
+  margin-bottom: 60px;
+  /* border-bottom: 4px solid red; */
+  /* padding-bottom: 20px; */
+  font-family: "Lato", sans-serif;
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.aboutus p {
+  font-family: "Lato", sans-serif;
+  width: 74vw;
+  font-size: 28px;
+  font-weight: 100;
+  /* background-color: red; */
+}
+
+.speech-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: rgb(248, 248, 248); */
+  /* background-color: red; */
+  /* align-items: center; */
+}
+
+.speech-img {
+  width: 30%;
+  background-image: url("../../assets/images/properietor.png");
+  background-size: cover;
+  background-position: left bottom;
+}
+
+.speech-content {
+  width: 50%;
+  /* margin-left: 100px; */
+  padding-top: 10px;
+  /* background-color: red; */
+}
+
+.speech-title {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  padding-bottom: 12px;
+}
+
+hr {
+  width: 90px;
+  height: 5px;
+  border: none;
+  background-color: red;
+  margin-bottom: 64px;
+}
+
+.speech {
+  width: 92%;
+  /* background-color: red; */
+  font-family: "lato", sans-serif;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 32px;
+}
+
+.vision-section {
+  margin: 180px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-vision {
+  width: 50%;
+  /* margin-left: 100px; */
+  /* background-color: red; */
+  font-family: "lato", sans-serif;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 32px;
+}
+
+.our-vision h2 {
+  font-family: "lato", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  padding-bottom: 24px;
+}
+
+.vision-image {
+  width: 30%;
+  height: 420px;
+  background-image: url("../../assets/images/rocket.png");
+  background-size: cover;
+  /* border: 2px solid red; */
+}
+
+/* =============Media Queries section =========== */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .speech-img {
+    width: 30%;
+    height: 34rem;
+  }
+
+  .speech-content {
+    width: 50%;
+    height: 40rem;
+    padding-top: 0;
+  }
+
+  hr {
+    margin-bottom: 40px;
+  }
+
+  .speech {
+    line-height: 30px;
+  }
+
+  /* ==========Vision section ======= */
+
+  .our-vision {
+    width: 60%;
+    margin-left: 4rem;
+    /* background-color: red; */
+    /* font-family: "lato", sans-serif; */
+    font-size: 20px;
+    /* font-weight: 200; */
+    line-height: 30px;
+  }
+
+  .vision-image {
+    width: 20%;
+    /* height: 420px; */
+    background-image: url("../../assets/images/rocket.png");
     background-size: cover;
-    /* background: red; */
-    text-align:left;  
- }
- 
- 
- .aboutus{
-    display: flex;
-    flex-direction: column;
-    width: inherit; height: inherit;
-    /* background-color: red; */
-    color: white;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 100px;
-    
- }
- 
- .aboutus  h2{
-    margin-bottom: 60px;
-    /* border-bottom: 4px solid red; */
-    /* padding-bottom: 20px; */
-    font-family: 'Lato', sans-serif;
-    font-size: 60px;
-    font-weight: lighter;
- }
- 
- .aboutus  p{
-     font-family: 'Lato', sans-serif;
-     width: 74vw;
-     font-size: 28px;
-     font-weight:100;
-     /* background-color: red; */
- }
- 
- .speech-wrapper{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(248,248,248);
-    /* align-items: center; */
- }
-
- .speech-img {
-    width: 530px ;
- }
- 
- .speech-content{
-    width: 30vw;
-    margin-left: 100px;
-    padding-top: 10px ;
-    /* background-color: red; */
- }
- 
- .speech-title {
-    font-family: 'lato', sans-serif;
-    font-weight: 400;
-    font-size: 50px;
-    padding-bottom: 12px;
- }
- 
- hr{
-    width: 90px;
-    height: 5px;
-    border:none;
-    background-color: red;
-    margin-bottom: 64px; 
- }
-
- .speech {
-    width: 92%;
-    /* background-color: red; */
-    font-family: 'lato', sans-serif;
-    font-size: 21px;
-    font-weight: 200;
-    line-height: 32px;
- }
- 
- .vision-section{
-    margin: 180px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
- }
- 
- .our-vision{
-    width: 46vw;
-    margin-left: 100px;
-    /* background-color: red; */
-    font-family: 'lato', sans-serif;
-    font-size: 21px;
-    font-weight: 200;
-    line-height: 32px;
- }
- 
- .our-vision h2{
-    font-family: 'lato', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    padding-bottom: 24px;
- }
- 
- .vision-image{
-    width: 40%; height: 420px;
+    padding-right: 10rem;
     /* border: 2px solid red; */
- }
+  }
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .aboutus-bg {
+    height: 420px;
+    background-color: red;
+  }
+
+  .aboutus {
+    padding-left: 60px;
+  }
+
+  .aboutus h2 {
+    margin-bottom: 50px;
+    font-size: 52px;
+  }
+
+  .aboutus p {
+    width: 80vw;
+    font-size: 26px;
+  }
+
+  .speech-img {
+    width: 30%;
+    margin: 10px;
+    background-position: top center;
+    height: 25rem;
+  }
+  .speech-content {
+    width: 60%;
+    height: 40rem;
+    margin: 0 auto;
+  }
+
+  /* ==========Vision section ======= */
+
+  .our-vision {
+    width: 55%;
+    margin-left: 2rem;
+    /* background-color: red; */
+    /* font-family: "lato", sans-serif; */
+    font-size: 20px;
+    /* font-weight: 200; */
+    line-height: 30px;
+  }
+
+  .vision-image {
+    width: 20%;
+    /* height: 420px; */
+    background-image: url("../../assets/images/rocket.png");
+    background-size: cover;
+    padding-right: 10rem;
+    /* border: 2px solid red; */
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .aboutus-bg {
+    height: 400px;
+    /* background-color: red; */
+  }
+
+  .aboutus {
+    padding-left: 40px;
+  }
+  .aboutus h2 {
+    margin-bottom: 48px;
+    font-size: 50px;
+  }
+
+  .aboutus p {
+    width: 86vw;
+    font-size: 22px;
+  }
+
+  .speech-wrapper {
+    display: block;
+  }
+
+  .speech-img {
+    width: 50%;
+    margin: 20px;
+    background-position: top center;
+    height: 25rem;
+  }
+
+  .speech-title {
+    font-size: 40px;
+    padding-bottom: 8px;
+  }
+
+  .speech {
+    font-size: 18px;
+  }
+
+  .speech-content {
+    width: 90%;
+    height: 40rem;
+    margin: 0 20px;
+  }
+
+  /* ==========Vision section ======= */
+  .vision-section {
+    display: flex;
+    margin: 60px 0;
+    flex-direction: column-reverse;
+    /* background-color: greenyellow; */
+    align-items: start;
+  }
+  .our-vision {
+    width: 90%;
+    /* margin: 0; */
+    /* background-color: red; */
+    /* font-family: "lato", sans-serif; */
+    font-size: 18px;
+    margin: 20px;
+    /* font-weight: 200; */
+    line-height: 30px;
+  }
+
+  .our-vision h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+
+  .our-vision p {
+    margin-top: -20px;
+  }
+
+  .vision-image {
+    width: 60%;
+    /* height: 420px; */
+    background-image: url("../../assets/images/rocket.png");
+    background-size: cover;
+    /* margin: 0 auto; */
+    /* background-color: blue; */
+    /* padding-right: 10rem; */
+    /* border: 2px solid red; */
+  }
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .aboutus-bg {
+    height: 360px;
+    /* background-color: red; */
+  }
+
+  .aboutus {
+    padding-left: 20px;
+  }
+  .aboutus h2 {
+    margin-bottom: 44px;
+    font-size: 48px;
+  }
+
+  .aboutus p {
+    width: 78vw;
+    font-size: 20px;
+  }
+
+  .speech-wrapper {
+    display: block;
+  }
+
+  .speech-img {
+    width: 50%;
+    margin: 10px;
+    background-position: top center;
+    height: 20rem;
+  }
+
+  .speech-title {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+
+  .speech {
+    font-size: 18px;
+  }
+
+  .speech-content {
+    width: 90%;
+    height: 40rem;
+    margin: 0 20px;
+  }
+
+  /* ==========Vision section ======= */
+  .vision-section {
+    display: flex;
+    margin: 50px 0;
+    flex-direction: column-reverse;
+    /* background-color: greenyellow; */
+    align-items: start;
+  }
+
+  .our-vision {
+    width: 90%;
+    /* margin: 0; */
+    /* background-color: red; */
+    /* font-family: "lato", sans-serif; */
+    font-size: 18px;
+    margin: 30px;
+    /* font-weight: 200; */
+    line-height: 30px;
+  }
+
+  .our-vision h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+
+  .our-vision p {
+    margin-top: -20px;
+  }
+
+  .vision-image {
+    width: 60%;
+    /* height: 420px; */
+    background-image: url("../../assets/images/rocket.png");
+    background-size: cover;
+    /* margin: 0 auto; */
+    /* background-color: blue; */
+    /* padding-right: 10rem; */
+    /* border: 2px solid red; */
+  }
+}
