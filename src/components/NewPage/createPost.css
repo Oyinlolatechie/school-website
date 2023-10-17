@@ -1,0 +1,169 @@
+
+.create-post form{
+    width: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
+    margin: 2rem auto;
+    padding: 48px 18px 48px 40px;
+  
+}
+
+.create-post form input, 
+.create-post form textarea
+ {
+    width: 90%;
+}
+
+.validation-error {
+    font-size: 18px;
+    color: red;
+    margin-top: -20px;
+}
+
+.create-post label {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.light-weight {
+    font-weight: 100;
+}
+
+.create-post form .description {
+    height: 100px;
+}
+
+.description-validation{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.create-post form select,
+.create-post form button
+ {
+    width: 94%;
+}
+
+
+ /* ============================== MEDIA QUERY ============================== */
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .create-post form{
+        width: 52%;
+        margin: 2rem auto;
+        padding: 40px 10px 40px 40px; 
+    }
+
+    .create-post form input {
+        height: 40px;
+    }
+ 
+
+}
+
+/* medium size screen (e.g tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .create-post form{
+        width: 58%;
+        margin: 2rem auto;
+        padding: 40px 10px 40px 30px; 
+    }
+
+    .create-post form input {
+        height: 42px;
+    }
+
+    .create-post form select {
+        height: 50px;
+    }
+ 
+    .create-post form button {
+        height: 60px;
+    }
+
+    .create-post form input, 
+    .create-post form textarea
+ {
+    width: 88%;
+}
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .create-post form{
+        width: 70%;
+        margin: 2rem auto;
+        padding: 40px 10px 40px 20px; 
+    }
+  
+    .create-post label {
+     
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .create-post form input {
+        height: 38px;
+    }
+
+
+    .create-post form select {
+        height: 40px;
+        font-size: 14px;
+    }
+ 
+    .create-post form button {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .create-post form input, 
+    .create-post form textarea
+ {
+    width: 88%;
+}
+}
+
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+ 
+    .create-post form{
+        width: 80%;
+        margin: 2rem auto;
+        padding: 40px 10px 40px 20px; 
+    }
+  
+    .create-post label {
+     
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .create-post form input {
+        height: 38px;
+    }
+
+
+    .create-post form select {
+        height: 40px;
+        font-size: 14px;
+    }
+ 
+    .create-post form button {
+        height: 46px;
+        font-size: 18px;
+    }
+
+    .create-post form input, 
+    .create-post form textarea
+ {
+    width: 88%;
+}
+}

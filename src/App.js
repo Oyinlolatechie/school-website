@@ -7,6 +7,7 @@ import Admission from './components/AdmissionPage/Admission'
 import NewsPage from './components/NewPage/NewsPage';
 import ContactPage from './components/ContactPage/contactPage';
 import NewsContent from './components/NewPage/NewsContent';
+import CreatePost from './components/NewPage/CreatePost';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/Admission' element={<Admission />} />
           <Route path='/News' element={<NewsPage />} />
           <Route path='News/:id' element={<NewsContent />} />
+          <Route path='News/create' element={<CreatePost />} />
           <Route path='contact' element={<ContactPage />} />
 
         </Routes>

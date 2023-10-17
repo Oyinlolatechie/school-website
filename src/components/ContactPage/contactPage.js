@@ -1,22 +1,37 @@
+import { useState } from 'react';
 import { MdPhonelinkRing, MdLocationPin } from 'react-icons/md';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 import Footer from '../HomePage/Footer';
 
 
-
-
 import './contact.css'
 
-const contactPage = () => {
+const ContactPage = () => {
+    const [fullname, setFullname] = useState("")
+    const [email, setEmail] = useState("")
+    const [enquiry, setEnquiry] = useState("appoinment")
+    const [message, setMesage] = useState("")
+
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const contactReport = { fullname, email, enquiry, message }
+
+
+        console.log(contactReport);
+
+    }
+
+
     return (
         <div className="contact-page">
             <div className="news-bg">
                 <div className="news-header">
                     <h2>Contact us</h2>
                     <hr />
-                    {/* <p>  The admissions process at New Hall International School consists of a sequence of steps which vary depending upon the age of the child. Below is a summary of the process
-            </p> */}
+
                 </div>
             </div>
 
@@ -54,28 +69,51 @@ const contactPage = () => {
                 </div>
 
                 <div className="contact-section-right">
-                    <form action="">
+                    <form onSubmit={handleSubmit}>
                         <p>GET IN TOUCH WITH US</p>
 
                         <h2>Make Enquiry Here</h2>
                         <div className='input-wrap'>
-                            <input type="text" placeholder='Full name' />
+                            <input
+                                type="text"
+                                placeholder='Full name'
+                                required
+                                value={fullname}
+                                onChange={(e) => setFullname(e.target.value)}
+
+                            />
                             <span className='input-icon'><BsFillPersonFill /></span>
 
                         </div>
 
                         <div className='input-wrap'>
-                            <input type="email" placeholder='Email address' />
+                            <input
+                                type="email"
+                                placeholder='Email address'
+                                required
+                                value={email}
+                                onChange={(e) => { setEmail(e.target.value) }}
+                            />
                             <span className='input-icon'><HiOutlineMail /></span>
                         </div>
 
 
-                        <select name="" id="">
-                            <option value="">General Inquiry</option>
-                            <option value="">Need appointment</option>
+                        <select
+                            value={enquiry}
+                            onChange={(e) => setEnquiry(e.target.value)}
+
+                        >
+                            <option value="inquiry">General Inquiry</option>
+                            <option value="appoinment">Need appointment</option>
                         </select>
 
-                        <textarea name="" id="" cols="30" rows="10" placeholder='Message'></textarea>
+                        <textarea
+                            cols="30"
+                            rows="10"
+                            placeholder='Message'
+                            value={message}
+                            onChange={(e) => setMesage(e.target.value)}
+                        ></textarea>
 
                         <button>Send Message</button>
                     </form>
@@ -89,4 +127,4 @@ const contactPage = () => {
     );
 }
 
-export default contactPage;
+export default ContactPage;

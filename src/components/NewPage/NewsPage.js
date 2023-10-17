@@ -6,16 +6,15 @@ import { Link } from 'react-router-dom'
 
 
 const NewsPage = () => {
-    const { data: News, isPending, error } = useFetch('http://localhost:5000/news')
-
+    const { data: Posts, isPending, error } = useFetch('https://divine-treasue-school.onrender.com/api/v1/posts')
 
     return (
         <>
             {isPending && <div>Loading ...</div>}
             {error && <div>{error}</div>}
 
-            {News && <div>
-                {News && (<div className="news-section">
+            {Posts && <div>
+                {Posts && (<div className="news-section">
                     <div className="news-bg">
                         <div className="news-header">
                             <h2>News & Articles</h2>
@@ -25,30 +24,49 @@ const NewsPage = () => {
                         </div>
                     </div>
 
+                    <div className="news-wrap">
+                        {Posts.map((Post) => (
 
-                    {News.map((New) => (<div className="news-wrapper" key={New.id}>
+                            <div className="news-wrapper" key={Post._id}>
 
-                        <div className="news-img">
-                            <div className="tag">News</div>
-                            <img src={NewsImage} alt={"students"} />
-                        </div>
+                                <div className="news-framer">
+                                    <div className="news-img">
+                                        <div className="tag">News</div>
+                                        <img src={NewsImage} alt={"students"} />
+                                    </div>
 
-                        <div className="news-content">
-                            <Link to={`/News/${New.id}`}>
-                                <h2>{New.headline}</h2>
-                            </Link>
-                            <p> {New.description}</p>
-                            <Link to={`/News/${New.id}`}>Read more...</Link>
-                            <p> <i className="fa-regular fa-clock"></i> September 26, 2022</p>
-                        </div>
+                                    <div className="news-content">
+                                        <div>
+                                            <Link to={`/News/${Post._id}`}>
+                                                <h2>{Post.headline}</h2>
+                                            </Link>
+
+                                            <p className="news-desc"> {Post.description}</p>
+                                        </div>
+
+                                        <div className="news-meta_wrap">
+                                            <div className="news-meta">
+                                                <i className="fa-regular fa-calendar date-icon" ></i> <p>{Post.createdAt.split('T')[0]}</p>
+                                            </div>
+
+                                            <div>
+                                                <Link to={`/News/${Post._id}`}> <button className="post-btn">Read more</button> </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        ))}
+                        <Link to={'/news/create'}><button className="post-btn">Add a Post</button></Link>
 
                     </div>
-                    ))}
-
                 </div>)}
 
+
+
                 <Footer />
-            </div>}
+            </div >}
         </>
     );
 }

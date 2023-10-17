@@ -15,14 +15,14 @@ const Footer = () => {
                 <div class="footer-contactUs">
                     <h2>Contact Info</h2>
                     <p>
-                        Lekki Campus: KM 40, Lekki-Epe Expressway, Awoyaya, Ibeju Lekki, Lagos
-                        Ikoyi Campus: 12a Reeve Road, Ikoyi, Lagos
+                        Primary School: 5, Adepeju Street, Teachers Quarters, Aroro Makinde, Ibadan, Oyo.
+                        College : 5, Adepeju Street, Teachers Quarters, Aroro Makinde, Ibadan, Oyo.
                     </p>
                     <p>
-                        Phone Numbers: +234 704 550 2424, +234 704 550 2444, +234 806 407 4503, +234 908 717 1700
+                        Phone Number: 0810 796 5431
                     </p>
                     <p>
-                        Email Addresses: info.anthony@greenspringsschool.com
+                        Email Addresses: divinetreasure@gamil.com
                     </p>
                 </div>
 
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
             </div>
             <div class="copyright">
-                <p>Copyright © 2022 | Divine Treasure College. All Rights Reserved</p>
+                <p>website designed by <s className="creditName">oyinlolatechie</s></p>
             </div>
 
         </footer>

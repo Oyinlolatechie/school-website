@@ -1,7 +1,7 @@
 import useFetch from "../hooks/useFetch";
 
 const OurSchool = () => {
-    const { data, isPending, error } = useFetch('http://localhost:5000/school', 3)
+    const { data, isPending, error } = useFetch('https://divine-treasue-school.onrender.com/api/v1/school_data')
 
     return (
         <>
@@ -21,12 +21,12 @@ const OurSchool = () => {
                             </div>
 
                             <div>
-                                <h2>{data.no}</h2>
+                                <h2>{data.number}</h2>
                                 <p>Schools</p>
                             </div>
 
                             <div>
-                                <h2>{data.passing}</h2>
+                                <h2>{data.pass_rate}</h2>
                                 <p>Passing to Universities</p>
                             </div>
 

@@ -55,10 +55,6 @@
   margin-bottom: 24px;
 }
 
-.contact-content :nth-child(3) {
-  margin-top: -10px;
-}
-
 .contact-address {
   display: flex;
   width: 340px;
@@ -152,6 +148,7 @@ button:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
   .contact-section-left {
     display: flex;
     flex-wrap: wrap;

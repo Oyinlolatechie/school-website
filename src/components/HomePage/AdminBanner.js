@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AdminBanner = ({ adminImg }) => {
     return (
 
@@ -12,10 +14,10 @@ const AdminBanner = ({ adminImg }) => {
 
                 <div className="admin-content">
                     <h2>Apply For Admission</h2>
-                    <p>We are one of the foremost British international schools in Lagos and Nigeria; we provide a well-rounded education that enables our students to develop vital life skills and excel academically. Here is a summary of our admission procedure.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, corporis deleniti iste possimus commodi necessitatibus asperiores saepe laudantium quaerat dolor porro unde reprehenderit quasi, accusamus id maxime soluta sit libero?</p>
                 </div>
 
-                <button className="admin-btn">Apply Now</button>
+                <Link to="/Admission" className="link-btn"><button className="admin-btn">Apply Now</button></Link>
             </div>
         </>
     );

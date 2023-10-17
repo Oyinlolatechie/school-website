@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import axios from "axios";
 
 
 
@@ -14,29 +15,28 @@ const useFetch = (url, limit) => {
         let abortFecth = setTimeout(() => {
             abortCont.abort()
             console.log("fecth was taking too long")
-        }, 30000);
+        }, 300000);
 
-        fetch(url, { signal })
+        axios.get(url, { signal })
             .then(res => {
-                if (!res.ok) {
+                if (res.status !== 200) {
+                    console.log(res)
                     setIsPending(false)
                     throw Error('An error occured')
                 }
-                return res.json()
+                return res
             })
 
             .then(data => {
                 clearTimeout(abortFecth)
-                setData(limit ? data.slice(0, limit) : data)
+                setData(data.data.data)
                 setIsPending(false)
                 setError(null)
-
             })
 
             .catch(error => {
                 if (error.name === 'AbortError') {
                     console.log(error.message)
-
                 }
                 console.log(error.message)
                 setError(error.message)

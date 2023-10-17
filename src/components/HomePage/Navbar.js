@@ -14,14 +14,14 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar-container">
-                <img src={logo}
+                <Link to="/"><img src={logo}
                     alt="DTC Logo"
                     id="logo"
-                />
+                /></Link>
 
                 <ul className={click ? 'navbar-menu active' : 'navbar-menu'}>
                     <li><Link className='nav-item' to="/">Home</Link></li>
-                    <li><Link className='nav-item' to='About-us'>About</Link></li>
+                    <li><Link className='nav-item' to='/About-us'>About</Link></li>
                     <li><Link className='nav-item' to="/Admission">Admission</Link></li>
                     <li><Link className='nav-item' to="https://divinetreasureschools.com/">School portal</Link></li>
                     <li><Link className='nav-item' to="/News">News&Events</Link></li>
@@ -33,7 +33,7 @@ const Navbar = () => {
                     {click ? (<FaTimes size={25} />) : (<FaBars size={25} />)}
 
                 </div>
-            </nav>
+            </nav >
         </>
     );
 }

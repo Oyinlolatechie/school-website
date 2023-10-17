@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import useFetch from '../hooks/useFetch'
 import { BsPersonFill } from 'react-icons/bs'
 import NewsImg from '../../assets/images/NewsDemo.jpg'
+import { Link } from 'react-router-dom'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const News = () => {
-    const { data: news, isPending, error } = useFetch("http://localhost:5000/news", 5)
+    const { data: news, isPending, error } = useFetch("https://divine-treasue-school.onrender.com/api/v1/posts")
 
     useEffect(() => {
         AOS.init()
@@ -64,18 +65,19 @@ const News = () => {
             <div className="news-wrap">
                 <Slider {...settings} >
                     {news.map((newsContent) => (
-                        <div className="news-frame" key={newsContent.id}>
+                        <div className="news-frame" key={newsContent._id}>
                             <div className="news-image">
-                                <img
+                                <Link to={`/News/${newsContent._id}`}> <img
                                     src={NewsImg}
-                                    alt='News' />
+                                    alt='News' /></Link>
                             </div>
                             <div className="news-title">
-                                <h2>{newsContent.headline}</h2>
+                                <h2> <Link to={`/News/${newsContent._id}`}>{newsContent.headline}</Link></h2>
                                 <div className='news-icons'>
-                                    <p className='author'> <BsPersonFill className="author-icon" /><span>{newsContent.author}</span></p>
-                                    <p className='date'> <i className="fa-regular fa-clock"><span> September 26, 2022</span></i>
-                                    </p>
+                                    <Link to={`/News/${newsContent._id}`}><button className='news-btn'>Read More</button></Link>
+
+                                    {/* <p className='date'> <i className="fa-regular fa-clock"><span> September 26, 2022</span></i>
+                                    </p> */}
 
                                 </div>
                             </div>
